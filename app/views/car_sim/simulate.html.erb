@@ -1,0 +1,11 @@
+<h1>Car Simulator</h1>
+<!-- <p>Find me in app/views/car_sim/simulate.html.erb</p> -->
+<p>Make: <%= @car.make %></p>
+<p>Year: <%= @car.year %></p>
+<p>Speed: <%=@car.speed %> mph</p>
+<form action="/car_sim/accelerate" method="get">
+  <input type="submit" value="Accelerate"/>
+</form>
+<form action="/car_sim/brake" method="get">
+  <input type="submit" value="Brake"/>
+</form>
