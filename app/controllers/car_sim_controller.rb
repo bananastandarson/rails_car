@@ -16,4 +16,19 @@ class CarSimController < ApplicationController
     cookies[:car] = @car.to_yaml
     redirect_to '/car_sim/simulate'
   end
+
+  def toggle_lights
+    simulate
+    @car.toggle_lights
+    cookies[:car] = @car.to_yaml
+    redirect_to '/car_sim/simulate'
+  end
+
+  def toggle_parking_brake
+    simulate
+    @value = params[:parking_brake]
+    @car.toggle_parking_brake = @value == "true"
+    cookies[:car] = @car.to_yaml
+    redirect_to '/car_sim/simulate'
+  end
 end

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'car_sim/brake'
 
+  get 'car_sim/toggle_lights'
+
+  get 'car_sim/toggle_parking_brake'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
